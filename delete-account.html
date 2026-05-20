@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar cuenta - Elite Training</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; font-size: 24px; margin-bottom: 8px; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 24px; }
+        .developer {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+        label {
+            display: block;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #2e7d32;
+            line-height: 1.6;
+        }
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #1b5e20;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #b71c1c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 12px;
+            color: #999;
+        }
+        .footer a {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitar eliminación de cuenta</h1>
+        <p class="subtitle">Elite Training (Iron Pulse)</p>
+        <p class="developer">Desarrollador: DiegoGM</p>
+
+        <form action="mailto:tusoporte@email.com" method="post" enctype="text/plain">
+            <label for="email">Email de tu cuenta</label>
+            <input type="email" id="email" name="Email de cuenta" placeholder="tu-email@ejemplo.com" required>
+
+            <label for="confirm">Confirmación</label>
+            <textarea id="confirm" name="Confirmacion" placeholder="Escribe: 'Solicito la eliminación completa de mi cuenta y todos mis datos personales'" required></textarea>
+
+            <div class="info-box">
+                <strong>¿Qué datos se eliminarán?</strong>
+                Al eliminar tu cuenta se borrarán permanentemente:<br>
+                • Tu perfil y foto de perfil<br>
+                • Tu historial de entrenamientos y nutrición<br>
+                • Tus mensajes de chat<br>
+                • Tus medidas y progreso<br><br>
+                <strong>Periodo de retención:</strong> Los datos se eliminan completamente en un plazo máximo de 30 días desde la solicitud.
+            </div>
+
+            <button type="submit">Enviar solicitud de eliminación</button>
+        </form>
+
+        <p class="footer">
+            ¿Necesitas ayuda? Contacta con nosotros.<br>
+            <a href="privacy-policy.html">Ver política de privacidad</a>
+        </p>
+    </div>
+</body>
+</html>
