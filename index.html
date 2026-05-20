@@ -5,51 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Elite Training</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #333; }
-        h2 { color: #555; margin-top: 30px; }
-        p { color: #666; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #222; }
+        h2 { color: #444; margin-top: 32px; }
+        h3 { color: #555; margin-top: 20px; }
+        p, li { color: #444; }
+        ul { padding-left: 22px; }
         .date { color: #999; font-style: italic; }
+        a { color: #1a73e8; }
+        code { background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: May 14, 2025</p>
+    <p class="date">Last updated: 19 May 2026</p>
 
-    <p>Elite Training ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").</p>
+    <p>Elite Training ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect when you use the Elite Training mobile application (the "App"), how we use it, who we share it with, and the choices you have. By using the App you agree to the practices described below.</p>
 
-    <h2>Information We Collect</h2>
-    <p>We may collect the following types of personally identifiable information:</p>
+    <h2>1. Information we collect</h2>
+    <p>We collect only what is needed to operate the App.</p>
+
+    <h3>Account &amp; identity</h3>
     <ul>
-        <li><strong>Name and email address</strong> - for account creation and authentication</li>
-        <li><strong>Profile photos</strong> - uploaded by users to personalize their accounts</li>
-        <li><strong>Body measurements, weight, and fitness progress data</strong> - to track your fitness journey</li>
-        <li><strong>Workout history, exercise logs, and nutrition records</strong> - to provide training services</li>
-        <li><strong>Chat messages between clients and coaches</strong> - to enable communication</li>
-        <li><strong>Device information and push notification tokens</strong> - for delivering app notifications</li>
-        <li><strong>Usage data and app interaction statistics</strong> - to improve user experience</li>
+        <li><strong>Name and email address</strong> — to create your account and identify you to your coach.</li>
+        <li><strong>Authentication credentials</strong> — managed by Firebase Authentication. We never see or store your password in plaintext.</li>
+        <li><strong>User identifier (UID)</strong> — assigned by Firebase to link your data across sessions and devices.</li>
     </ul>
 
-    <h2>Camera Permission</h2>
-    <p>Our App requests access to your device's camera. This permission is used <strong>solely</strong> for the following purpose:</p>
+    <h3>Profile &amp; fitness data</h3>
     <ul>
-        <li><strong>Profile Photo Upload:</strong> Users can take photos with their camera to set or update their profile picture within the App. This feature allows clients and coaches to personalize their accounts with a visual identity.</li>
-    </ul>
-    <p>We do not use the camera for any other purpose. Photos taken are stored securely and are only visible within the App to authorized users (your coach or clients, as applicable). We do not share your photos with third parties for advertising or any other purposes.</p>
-
-    <h2>How We Use Your Information</h2>
-    <p>This information is collected solely to:</p>
-    <ul>
-        <li>Provide fitness training services</li>
-        <li>Enable communication between coaches and clients</li>
-        <li>Improve the user experience within the App</li>
-        <li>Send push notifications about scheduled sessions and messages</li>
+        <li><strong>Profile photo</strong> — optional; uploaded by you.</li>
+        <li><strong>Body metrics</strong> — height, weight, body fat, and similar measurements you choose to enter.</li>
+        <li><strong>Workouts and exercise logs</strong> — assignments from your coach, sets/reps completed, session duration, completion timestamps.</li>
+        <li><strong>Nutrition logs</strong> — meals and macros you record.</li>
+        <li><strong>Daily step count</strong> — read from your device's motion sensors (CMPedometer on iOS, Step Counter on Android). Steps are stored on-device and synced with your account; we do not link them to any external service.</li>
     </ul>
 
-    <h2>Data Storage and Security</h2>
-    <p>Your data is stored securely using Firebase services. We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+    <h3>Communication content</h3>
+    <ul>
+        <li><strong>Chat messages</strong> exchanged between you and your coach.</li>
+        <li><strong>Voice notes</strong> recorded inside the in-app AI assistant. These audio files are uploaded to our backend strictly to be transcribed; see <em>Third-party processors</em> below.</li>
+    </ul>
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us through the App or at our support email.</p>
+    <h3>Technical data</h3>
+    <ul>
+        <li><strong>Device push notification token</strong> — provided by Apple Push Notification Service (APNs) or Firebase Cloud Messaging (FCM); used to deliver notifications you've enabled.</li>
+        <li><strong>App version and basic diagnostic information</strong> — to investigate crashes and improve reliability.</li>
+    </ul>
+
+    <h2>2. Device permissions we request</h2>
+    <p>The App will ask for the following permissions on first use. You can deny or revoke them at any time in your device settings; the App will continue to work but the related features will be disabled.</p>
+    <ul>
+        <li><strong>Camera</strong> — to take a photo for your profile picture.</li>
+        <li><strong>Photo Library</strong> — to choose a profile picture from existing photos.</li>
+        <li><strong>Microphone</strong> — to record voice notes for the AI assistant (coaches only).</li>
+        <li><strong>Motion &amp; Fitness</strong> — to read your daily step count for the Steps card on the home screen.</li>
+        <li><strong>Push Notifications</strong> — to alert you about workouts, chat messages, and rest-timer events.</li>
+    </ul>
+
+    <h2>3. How we use your information</h2>
+    <ul>
+        <li>To provide the coaching and training features of the App.</li>
+        <li>To enable communication between coaches and their clients.</li>
+        <li>To synchronise your data across your devices.</li>
+        <li>To deliver push notifications you've opted into.</li>
+        <li>To transcribe voice notes into text when you use the AI assistant.</li>
+        <li>To diagnose crashes and improve the App.</li>
+    </ul>
+    <p>We do <strong>not</strong> sell your data. We do <strong>not</strong> use your data for advertising, profiling for marketing, or any form of tracking across other apps or websites.</p>
+
+    <h2>4. Third-party processors</h2>
+    <p>To operate the App we rely on a small number of trusted service providers. We only share the minimum information needed and only for the purposes listed.</p>
+    <ul>
+        <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Functions, Cloud Messaging) — stores your account, your fitness data, and routes push notifications. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a>.</li>
+        <li><strong>Anthropic, PBC</strong> (Claude API) — receives the text messages you send to the in-app AI assistant in order to generate replies. Coach-only feature. Anthropic does not train models on this data. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic privacy</a>.</li>
+        <li><strong>OpenAI</strong> (Whisper transcription API) — receives audio you record as a voice note in the AI assistant, returns the transcript, and does not retain the audio after processing. Coach-only feature. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI privacy</a>.</li>
+        <li><strong>Expo / Expo Push Service</strong> — relays push notification payloads to APNs/FCM. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo privacy</a>.</li>
+        <li><strong>Apple Push Notification Service</strong> and <strong>Google Firebase Cloud Messaging</strong> — deliver push notifications to your device.</li>
+    </ul>
+
+    <h2>5. Data storage, retention and security</h2>
+    <p>Your data is stored in Google Firebase data centres. We apply the security controls offered by Firebase (TLS in transit, encryption at rest, identity-based access rules) plus our own access rules so a coach only sees their own clients and vice versa.</p>
+    <p>We keep your data for as long as your account is active. If you delete your account (see section 7), the data linked to your account is removed within 30 days.</p>
+
+    <h2>6. Children's privacy</h2>
+    <p>Elite Training is intended for users aged 13 and over. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal data, contact us and we will delete it.</p>
+
+    <h2>7. Your rights</h2>
+    <p>You can:</p>
+    <ul>
+        <li>Access and edit your data from inside the App ("Settings" → "Edit Profile").</li>
+        <li>Delete your account at any time. Follow the instructions at <a href="./delete-account.html">our account-deletion page</a>. Once submitted, all data associated with the account is removed within 30 days.</li>
+        <li>Withdraw consent for any optional permission via your device settings.</li>
+    </ul>
+    <p>If you are in the EU/EEA, the UK or California you also have the right to request a copy of your data and to object to its processing. Contact us using the address below.</p>
+
+    <h2>8. International transfers</h2>
+    <p>Our service providers (Firebase, Anthropic, OpenAI, Expo) are based in the United States. Your data may therefore be processed outside your country of residence. We rely on the standard contractual clauses adopted by these providers for any transfer of personal data to third countries.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top. Material changes will be communicated inside the App.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions or requests related to this Privacy Policy can be sent to:</p>
+    <p><strong>Email:</strong> <a href="mailto:elitetrainingfitnessapp@gmail.com">elitetrainingfitnessapp@gmail.com</a></p>
 </body>
 </html>
