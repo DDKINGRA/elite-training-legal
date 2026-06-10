@@ -18,7 +18,7 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: 19 May 2026</p>
+    <p class="date">Last updated: 10 June 2026</p>
 
     <p>Elite Training ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains what information we collect when you use the Elite Training mobile application (the "App"), how we use it, who we share it with, and the choices you have. By using the App you agree to the practices described below.</p>
 
@@ -78,11 +78,18 @@
     <p>To operate the App we rely on a small number of trusted service providers. We only share the minimum information needed and only for the purposes listed.</p>
     <ul>
         <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Functions, Cloud Messaging) — stores your account, your fitness data, and routes push notifications. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a>.</li>
-        <li><strong>Anthropic, PBC</strong> (Claude API) — receives the text messages you send to the in-app AI assistant in order to generate replies. Coach-only feature. Anthropic does not train models on this data. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic privacy</a>.</li>
-        <li><strong>OpenAI</strong> (Whisper transcription API) — receives audio you record as a voice note in the AI assistant, returns the transcript, and does not retain the audio after processing. Coach-only feature. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI privacy</a>.</li>
         <li><strong>Expo / Expo Push Service</strong> — relays push notification payloads to APNs/FCM. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo privacy</a>.</li>
         <li><strong>Apple Push Notification Service</strong> and <strong>Google Firebase Cloud Messaging</strong> — deliver push notifications to your device.</li>
     </ul>
+
+    <h3>Third-party AI services (coach role only, opt-in)</h3>
+    <p>The AI assistant is available exclusively to coach accounts. <strong>Client accounts never have any of their data sent to an AI service</strong> — no AI request can be made from a client device, and this is enforced on our backend.</p>
+    <p>Before any data is sent to an AI provider, the coach must grant explicit permission through a dedicated in-app consent screen that identifies both recipients and the exact data shared. Declining keeps the rest of the App fully functional. Consent can be revoked at any time from <strong>Settings → AI Assistant</strong> inside the App, which immediately blocks all AI requests and also allows permanent deletion of the assistant chat history.</p>
+    <ul>
+        <li><strong>Anthropic, PBC</strong> (Claude API) — receives: the text messages the coach types to the assistant; the display names of the coach's clients and basic training-activity information (e.g. the date of a client's last logged session) when the assistant or the re-engagement tool looks them up; and the coach's exercise and workout libraries (names, sets/reps, intensity). Client email addresses, passwords, payment data, private chats, photos, body metrics, and health data (steps, heart rate, nutrition) are never sent. Anthropic does not train models on this data. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic privacy</a>.</li>
+        <li><strong>OpenAI</strong> (Whisper transcription API) — receives audio the coach records as a voice note in the AI assistant, returns the transcript, does not retain the audio after processing, and does not use it for model training. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI privacy</a>.</li>
+    </ul>
+    <p>All processors listed in this section are bound by their own privacy policies and data-processing terms that provide the same or an equivalent level of protection for your data as this policy, including GDPR-compliant safeguards for international transfers.</p>
 
     <h2>5. Data storage, retention and security</h2>
     <p>Your data is stored in Google Firebase data centres. We apply the security controls offered by Firebase (TLS in transit, encryption at rest, identity-based access rules) plus our own access rules so a coach only sees their own clients and vice versa.</p>
